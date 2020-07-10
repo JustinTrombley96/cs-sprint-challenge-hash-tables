@@ -1,25 +1,28 @@
-arrays = [
-    [1, 2, 3, 4, 5],
-    [12, 7, 2, 9, 1],
-    [99, 2, 7, 1,]
-]
-triplets = {}
-
 def intersection(arrays):
     """
     YOUR CODE HERE
     """
+    results = {}
+    final_result = []
+
     # Your code here
     for array in arrays:
         for num in array:
-            if num in triplets:
-                triplets[num] += 1
-                # print(triplets[num] 2, 2, 2, 3, 3, 3,
+            if num in results:
+                results[num] += 1
+                # print(num) 1, 2, 3, 1, 2, 3,
+                # print(results[num] 2, 2, 2, 3, 3, 3,
             else:
-                triplets[num] = 1
+                results[num] = 1
+
+    for result in results.items():
+        if result[1] == len(arrays):
+            final_result.append(result[0])
+            
 
 
-    return result
+
+    return final_result
 
 
 if __name__ == "__main__":
