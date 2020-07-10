@@ -2,9 +2,27 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    results = {}
+    final_result = []
 
-    return result
+    # Your code here
+    for array in arrays:
+        for num in array:
+            if num in results:
+                results[num] += 1
+                # print(num) 1, 2, 3, 1, 2, 3,
+                # print(results[num] 2, 2, 2, 3, 3, 3,
+            else:
+                results[num] = 1
+
+    for result in results.items():
+        if result[1] == len(arrays):
+            final_result.append(result[0])
+            
+
+
+
+    return final_result
 
 
 if __name__ == "__main__":
