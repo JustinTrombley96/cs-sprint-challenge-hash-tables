@@ -1,5 +1,3 @@
-a = [1, -1, 2, 3, -4, -3, 4, -5, 6, 7]
-
 def has_negatives(a):
     """
     YOUR CODE HERE
@@ -7,20 +5,15 @@ def has_negatives(a):
     # Your code here
     results = {}
     final_result = []
+
     for num in a:
         # print(a) [1, -1, 2, 3, -4, -3, 4, -5, 6, 7]
-        curr_num = a[num]
+        results[num] = True
+        # print(results)
         # print(curr_num) -4, 4, -2, 1, 2, 3, 2, {}
-        if curr_num < 0:
-            # print(curr_num) -4, -2
-            results[curr_num] = True
-            # print(abs(curr_num)) 4, 2
-    for result in results:
-        if abs(result) not in a:
-            result
-
-
-
+        if -num in results and num != 0:
+            # print(-num)
+            final_result.append(abs(num))
 
     return final_result
 
